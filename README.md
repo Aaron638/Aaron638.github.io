@@ -1,7 +1,5 @@
-## This is my personal Website
+# This is my website
 
-It is a work in progress
+It is a work in progress.
 
-## Epilogue
-
-[Template Source:](https://perfectmotherfuckingwebsite.com/)
+Template taken from [here.](https://perfectmotherfuckingwebsite.com/)
