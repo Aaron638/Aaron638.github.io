@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ site.title | default: site.github.repository_name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description | default: site.github.project_tagline }}">
+    <link rel="stylesheet" href="{{ '/style.css?v=' | append: site.github.build_revision | relative_url }}">
+</head>
+
+<body>
+    {{ content }} 
+    Maine | Iowa | Colorado 
+    -------|------|----------
+       1   |  4   |   10
+      ME   |  IA  |   CO
+     Blue  | Red  | Brown
+      [Optional caption]
+    
+     Maine | Iowa | Colorado 
+    -------|------|----------
+       1   |  4   |   10
+      ME   |  IA  |   CO
+     Blue  | Red  | Brown
+    [Table [states]: Caption with label.]
+    
+    Item | Type | Cost
+    ---- |:----:| ----:
+    Fish |  F   | 1.00
+    Axe  |  W   | 3.25
+    Gold |  I   |20.50
+    
+    
+     | A |
+     |---|
+     | B |
+     | C |
+     | D |
+</body>
+
+</html>
+
+<!-- Markdeep: -->
+<style class="fallback">
+    body {
+        visibility: hidden;
+        white-space: pre;
+        font-family: monospace
+    }
+</style>
+
+<!-- Markdeep, save file as .md.html -->
+<script src="markdeep.min.js" charset="utf-8"></script>
+<script src="https://morgan3d.github.io/markdeep/latest/markdeep.min.js" charset="utf-8"></script>
+<script>
+    window.alreadyProcessedMarkdeep || (document.body.style.visibility = "visible")
+</script>
