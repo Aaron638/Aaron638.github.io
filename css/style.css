@@ -1,120 +1,62 @@
-a strong {
-	color: inherit;
-}
-
-img {
-	height: auto;
-	max-width: 100%;
-}
-
-/* Centering */
-
-header, main {
-	margin: 0 auto;
-	max-width: 50em;
-}
-
-/* Font */
+/* Everything: */
 
 @font-face {
 	font-family: Manrope;
-	src: url("./font/web/Manrope-Regular.woff2") format("woff2"), url("./font/web/Manrope-Regular.woff") format("woff");
+	src: url("../font/web/Manrope-Regular.woff2") format("woff2"), url("../font/web/Manrope-Regular.woff") format("woff");
 }
 
 body {
 	font-family: "Manrope", "Helvetica", "Arial", sans-serif;
 }
 
-/* Spacing */
+/* Header */
 
-body {
-	line-height: 1.5;
-	padding: 4em 1em;
-}
-
-h2 {
-	margin-top: 1em;
-	padding-top: 1em;
-}
-
-/* Color */
-
-@media (prefers-color-scheme: dark) {
-	body {
-		color: seashell;
-		background: #444;
-	}
-}
-
-h1, h2, strong {
-	color: white;
-}
-
-/* Balance */
-
-code, pre {
-	background: #363636;
-}
-
-code {
-	padding: 2px 4px;
-	vertical-align: text-bottom;
-}
-
-pre {
-	padding: 1em;
-}
-
-/* Primary Accent*/
-
-a {
-	color: #5bf;
-}
-
-/* Secondary Color */
-
-a:visited {
-	color: #ccf;
-}
-
-code, pre {
-	background: #1a1a1a;
-	border-bottom: 1px solid #d8dee9;
-	color: seashell;
-	-moz-font-smoothing: grayscale;
-	-webkit-font-smoothing: initial;
-}
-
-pre {
-	border-left: 2px solid #5bf;
-}
-
-/* Images */
-
-body {
-	margin: 0;
-	padding: 0;
-}
-
-main {
-	padding: 4em 1em;
-	padding-top: 0;
+header {
+	margin: 0 0;
+	max-width: 50em;
 }
 
 header {
+	color: white;
 	background-color: #363636;
 	background-image: url("../assets/header.jpg");
 	background-position: center 30%;
-	background-repeat: no-repeat;
 	background-size: cover;
 	line-height: 1.2;
 	max-width: none;
 	padding: 5vw 2em;
-	text-align: center;
 }
 
 header h1 {
-	color: white;
-	font-size: 2.5em;
+	margin: 0 auto;
+	font-size: 4em;
 	font-weight: 300;
+	text-align: left;
+}
+
+/* Header Nav */
+
+header ul {
+	list-style-type: none;
+	float: right;
+}
+
+header li {
+	display: inline;
+	padding: 0.5em;
+}
+
+header li a {
+	color: white;
+	text-decoration: none;
+}
+
+header li.active {
+	text-decoration: underline;
+}
+
+/* Main Body */
+main {
+	margin: 0 auto;
+	max-width: 50em;
 }
