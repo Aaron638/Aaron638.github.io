@@ -15,6 +15,11 @@ body {
 	font-family: "Manrope", "Helvetica", "Arial", sans-serif;
 }
 
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Header */
 
 header {
@@ -26,7 +31,7 @@ header {
 
 	color: white;
 	background-color: #363636;
-	background-image: url("../assets/header.jpg");
+	/* background-image: url("../assets/header.jpg"); */
 	background-position: center 30%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -64,4 +69,11 @@ header li.active {
 main {
 	margin: 0 auto;
 	max-width: 50em;
+	line-height: 1.5;
+  	padding: 4em 1em;
+}
+
+/* embed */
+embed {
+	line-height: 100%;
 }
