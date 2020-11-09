@@ -6,6 +6,11 @@
 	<title>Aaron Martin's Projects</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!-- PureCSS -->
+	<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+		integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<!-- CSS -->
 	<link rel="stylesheet" href="../css/style.css">
 
@@ -27,8 +32,168 @@
 	</header>
 
 	<main>
+		<div class="pure-g">
+			<div class="pure-u-1-2">
+				<h2>VLSI Multiply and Accumulate Unit</h2>
+				<h4>EE330 Fall 2020</h4>
+				<h4>Role: Design, Testing, and Virtual Implementation</h4>
+				<h4>Skills and Software Involved</h4>
+				<ul>
+					<li>VLSI layout with Cadence Virtuoso</li>
+					<li>Digital Logic Implementation in Verilog</li>
+					<li>Waveform testing and Synthesis in ModelSim</li>
+					<li>AMI 06 process technology</li>
+				</ul>
+			</div>
+			<div class="pure-u-1-2"><img src="/assets/330proj.PNG" alt="EE 330" class="pure-img-responsive"></div>
+			<div class="pure-u-1-1">
+				<p>&emsp;Design of a calculator that instead of doing four basic operations has one complex operation.
+					That
+					operation being 4x4 matrix multiplication. There are 10 different inputs buttons for the numbers
+					0-9. Since Matrix multiplication can get larger faster, implementation was restricted to the inputs
+					0-99. Output size was calculated accordingly.</p>
+				<p>&emsp;Memory size was implemented with NMOS and PMOS transistors on the AMI06 process, however for
+					practical simulation reasons, I had to limit the amount of memory to below 300 registers for
+					synthesis performance reasons.</p>
+				<p>&emsp;This project is ongoing this semester, however it remains one of the most complex ones in my entire
+					career as a Computer Engineering student. Drawing concepts from digital logic, mathematics to solve
+					circuits with non-linear electrical components, as well as having to create a component that solves
+					a somehwat open-ended problem. </p>
+			</div>
 
+			<div class="pure-u-1-2">
+				<h2>Tensor Processing Unit on MIAOW GPU</h2>
+				<h4>CPRE482x Fall 2020</h4>
+				<h4>Role: Multiplier Implementation, TPU Design</h4>
+				<h4>Skills and Software Involved</h4>
+				<ul>
+					<li>MIAOW GPU RTL implementation</li>
+					<li>Digital Logic Implementation in VHDL</li>
+					<li>Waveform testing in ModelSim</li>
+					<li>Simulation on Vivado</li>
+					<li>Implementation on Zedboard FPGA</li>
+				</ul>
+			</div>
+			<div class="pure-u-1-2"><img src="/assets/482proj.png" alt="CPRE 482x" class="pure-img-responsive"></div>
+			<div class="pure-u-1-1">
+				<p>This project is ongoing this semester, and is only partially finished. The following is a few
+					excerpts from our project proposal
+					report:</p>
+				<p>&emsp;MIAOW is an open source GPU which provides a RTL implementation of a GPU written in Verilog.
+					MIAOW
+					already focuses on general computation rather than graphics, allowing it to specialize in high
+					performance computing applications and research. In the context of neural networks, we can optimize
+					the GPU architecture for our application by implementing Tensor Cores which are specifically
+					designed to perform common neural network matrix operations.
+				</p>
+				<p>
+					&emsp;Our goal would be to design, test, synthesize, and benchmark a MIAOW GPU implementation with
+					these
+					tensor cores on the ZED board FPGAs.
+				</p>
 
+				<p>&emsp;First, we need to research and test the MIAOW GPU RTL as-is. The MAC we designed in lab 3 can
+					be
+					reused and modified as the base that we design the general processing element around. However, MIAOW
+					GPU is primarily written in Verilog, so we may have to re-write our MAC to work in verilog, or learn
+					how to synthesize the components we wrote in VHDL. </p>
+				<p>&emsp;Additionally MIAOW was developed using Synopsys VCS 2012, so we may have to look into porting
+					the
+					project to work with tool chains that we are more familiar with, such as Modelsim or Vivado.</p>
+				<p>&emsp;Second, we need to implement the MAC unit within the compute units. It is possible that we may
+					have
+					to outright re-write the compute unit, or we could potentially replace the vector ALU with our own
+					version optimized for tensors.</p>
+				<p>Lastly, we need to synthesize, debug synthesis, and benchmark it.</p>
+			</div>
+
+			<div class="pure-u-2-5">
+				<h2>GPS Android Game: "Cyde and Seek"</h2>
+				<h4>COMS 309 Fall 2019</h4>
+				<h4>Role: Front End Team Leader</h4>
+				<h4>Skills and Software Involved</h4>
+				<ul>
+					<li>Application written in Java</li>
+					<li>Android Studio developer environment</li>
+					<li>Springboot backend</li>
+					<li>Google Maps API</li>
+					<li>Scrum development framework</li>
+				</ul>
+			</div>
+			<div class="pure-u-2-5"><img src="/assets/309proj_2.png" alt="COMS 309" class="pure-img-responsive"></div>
+			<div class="pure-u-1-5"><img src="/assets/309proj_3.png" alt="COMS 309" class="pure-img-responsive"></div>
+			<div class="pure-u-1-1">
+				<b>Model:</b>
+				<p>&emsp;Our app uses the Java Spring framework for the backend and Android for the front end. The front
+					end
+					uses the Android Volley library to send and receive data in the form of JSON to the endpoints. The
+					Android application also uses websockets to constantly update the location of the player using the
+					device’s location. By using a mixture of both fine and coarse location, the backend is able to
+					receive a rough idea of where the player actually is, even with a bad signal.</p>
+				<p>&emsp;The goal of our application is for players to connect to a game, be able to play hide and seek
+					together, and then close a game and review overall statistics for each player within the game.
+					Players will have the ability to join or create a game. To join, the user will type the code that is
+					generated when another user creates a game. This makes it easy for players to play games with their
+					friends. The player that creates the game will receive the code for others to use to join the game.
+					For our overall game, we are using Google Maps API to allow users to see their location, along with
+					other players from the same group in the same game. We also have a leaderboard that displays a
+					player’s all time stats and allows them to compare them with their friends and all other players.
+				</p>
+
+				<b>Controller:</b>
+				<p>&emsp;The player’s location is updated on the server via websocket every couple of seconds. The
+					websocket
+					determines if any players are near each other and broadcasts this information to the affected
+					players. The controllers and websocket validate the input and return errors as necessary (e.g. when
+					something is missing or incorrect in a request).</p>
+
+				<b>View:</b>
+				<p>&emsp;Our application’s front-end is entirely based on an Android application, so we make use of two
+					activities, one that makes up all of the menu elements, such as the login screen, the game creation
+					screen, etc. The second activity is for playing the game itself. This contains the calls to the
+					Google Maps API to display the Google Map with place markers and various shapes based on the
+					information provided by the backend to show the location of other players, the game boundaries, etc.
+				</p>
+
+			</div>
+
+			<div class="pure-u-1-2">
+				<h2>User Interface Webapp Design: "Noted"</h2>
+				<h4>SE 319 Spring 2019</h4>
+				<h4>Role: Team Leader</h4>
+				<h4>Skills and Software Involved</h4>
+				<ul>
+					<li>Vanilla HTML and Javascript for performance</li>
+					<li>MaterialDesignLite</li>
+					<li>MaterializeCSS</li>
+					<li>Mapbox API</li>
+					<li>LeafletJS</li>
+					<li>SimpleMDE</li>
+					<li>OpenStreetMap API</li>
+					<li>OpenCage Geocoding API</li>
+					<li>MarkedJS</li>
+				</ul>
+			</div>
+			<div class="pure-u-1-2"><img src="/assets/319proj.png" alt="EE 330" class="pure-img-responsive"></div>
+			<div class="pure-u-1-1">
+				<p>&emsp;Initially, we had planned on Noted being a better version of Google Keep. After looking at our
+					time available, and the fact that we decided on this project before the COVID-19 pandemic, we had to
+					pivot and scale down our project in many ways. What the project is now is a fully functional note
+					taking web application. </p>
+				<p>&emsp;What this project has that Google Keep doesn’t is “smarter cards”. These cards were the main
+					focus of the project as we wanted notes/cards that had more functionality to them, like interactive
+					maps, and better text formatting. What this project doesn’t have is stuff on the UX side like smooth
+					card selection and moving, searching for notes, and note sorting. </p>
+				<p>&emsp;For the most part, this project is a successful proof of concept that a note app can
+					contextualize more complex data, without having to sacrifice performance. If it weren’t for the
+					shorter timeframe, conflict with other large project classes, and the pandemic, what our team
+					would’ve done differently is get a lot more done on the user experience side of things. </p>
+				<p>&emsp;More attention to detail like how the notes stack and display on the page is something that
+					Google Keep does exceedingly well, and it becomes obvious how difficult it is once you try to mimic
+					it.</p>
+			</div>
+
+		</div>
 
 	</main>
 </body>
