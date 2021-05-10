@@ -2,22 +2,52 @@
 
 @font-face {
 	font-family: "Manrope";
-	src: url("../font/web/Manrope-Regular.woff2") format("woff2"), url("../font/web/Manrope-Regular.woff") format("woff");
+	src: url("../font/web/Manrope-Regular.woff2") format("woff2"),
+		url("../font/web/Manrope-Regular.woff") format("woff");
 }
 
-.pure-g [class *= "pure-u"] {
+.pure-g [class*="pure-u"] {
 	font-family: "Manrope", "Helvetica", "Arial", sans-serif;
 }
 
 body {
-	margin: 0;
+	margin: 0 auto;
+	max-width: 50em;
 	padding: 0;
 	font-family: "Manrope", "Helvetica", "Arial", sans-serif;
+	line-height: 1.5;
+	padding: 4em 1em;
+	color: #566b78;
+}
+
+h2 {
+	margin-top: 1em;
+	padding-top: 1em;
+}
+
+h1,
+h2,
+strong {
+	color: #333;
+}
+
+code,
+pre {
+	background: #eee;
+}
+
+code {
+	padding: 2px 4px;
+	vertical-align: text-bottom;
+}
+
+pre {
+	padding: 1em;
 }
 
 .pure-img-responsive {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 /* Header */
@@ -25,11 +55,9 @@ body {
 header {
 	margin: 0 auto;
 	padding: 4vw 2em;
-
 	line-height: 1.2;
 	max-width: none;
 
-	color: white;
 	background-color: #363636;
 	/* background-image: url("../assets/header.jpg"); */
 	background-position: center 30%;
@@ -42,6 +70,7 @@ header h1 {
 	font-size: 4em;
 	font-weight: 300;
 	text-align: left;
+	color: white;
 }
 
 /* Header Nav */
@@ -63,14 +92,6 @@ header li a {
 
 header li.active {
 	text-decoration: underline;
-}
-
-/* Main Body */
-main {
-	margin: 0 auto;
-	max-width: 80em;
-	line-height: 1.5;
-  	padding: 4em 1em;
 }
 
 /* embed */
