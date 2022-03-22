@@ -1,4 +1,6 @@
 "dependencies": {
   "axios": ">=0.21.2",
-  "follow-redirects": ">=1.14.8"
+  "follow-redirects": ">=1.14.8",
+  "engine.io": ">=4.0.0",
+  "ua-parser-js": ">=0.7.23"
 }
